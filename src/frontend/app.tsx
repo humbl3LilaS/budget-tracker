@@ -1,15 +1,16 @@
-"use client"
-import {BrowserRouter, Route, Routes} from "react-router";
+"use client";
+import { BrowserRouter, Route, Routes } from "react-router";
+
 import RootPage from "@/frontend/routes/root";
 
-const App = () => {
+function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<RootPage/>}/>
+                <Route path="/" element={<RootPage />} />
             </Routes>
         </BrowserRouter>
     );
-};
+}
 
 export default App;
