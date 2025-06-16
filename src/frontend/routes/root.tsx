@@ -9,9 +9,10 @@ function RootPage() {
     }
     return (
         <div>
-            {budget.data.name}
-            :
-            {budget.data.amount}
+            <h1>Home</h1>
+            <p>
+                {budget.data.name}:{budget.data.amount}
+            </p>
         </div>
     );
 }

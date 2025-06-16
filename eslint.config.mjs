@@ -20,8 +20,10 @@ export default antfu(
             "ts/consistent-type-definitions": ["error", "type"],
             "no-console": ["warn"],
             "antfu/no-top-level-await": ["off"],
+            "antfu/top-level-function": ["off"],
             "node/prefer-global/process": ["off"],
-            // "node/no-process-env": ["error"],
+            "style/jsx-one-expression-per-line": ["off"],
+            "style/jsx-curly-brace-presence": ["off"],
             "perfectionist/sort-imports": [
                 "error",
                 {
@@ -33,6 +35,19 @@ export default antfu(
                 {
                     case: "kebabCase",
                     ignore: ["README.md"],
+                },
+            ],
+            "no-restricted-imports": [
+                "error",
+                {
+                    paths: [
+                        {
+                            name: "next/navigation",
+                            importNames: ["Link"],
+                            message:
+                                "Do not import Link from next/navigation. Use react-query's Link instead.",
+                        },
+                    ],
                 },
             ],
         },

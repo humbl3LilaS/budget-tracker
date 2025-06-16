@@ -4,3 +4,5 @@ coverage
 README.md
 drizzle
 .github
+package.json
+bun.lock
