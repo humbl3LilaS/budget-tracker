@@ -1,11 +1,15 @@
-import Nav from "@/features/landing-page/nav";
+import Hero from "@/components/landing-page/hero";
+import Nav from "@/components/landing-page/nav";
 
 const LandingPage = () => {
     return (
         <main>
-            <header>
-                <Nav />
-            </header>
+            <div className={""}>
+                <header>
+                    <Nav />
+                </header>
+                <Hero />
+            </div>
         </main>
     );
 };

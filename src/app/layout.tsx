@@ -31,9 +31,7 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <TRPCProvider>
-                    <main>{children}</main>
-                </TRPCProvider>
+                <TRPCProvider>{children}</TRPCProvider>
             </body>
         </html>
     );

@@ -1,15 +1,22 @@
 import { Grid3X3, Info, Wallet } from "lucide-react";
 import { Link } from "react-router";
 
+import MobileNav from "@/components/landing-page/mobile-nav";
 import { Button } from "@/components/ui/button";
-import MobileNav from "@/features/landing-page/mobile-nav";
 
 const Nav = () => {
     return (
         <nav>
-            <div className={"p-4 md:p-8 flex justify-between items-center"}>
+            <div
+                className={
+                    " p-4 md:p-8 py-4 flex justify-between items-center "
+                }
+            >
                 <h1 className={"text-muted-foreground"}>
-                    <Link to="/" className="flex items-center justify-center">
+                    <Link
+                        to="/public"
+                        className="flex items-center justify-center"
+                    >
                         <Wallet className="h-8 w-8 text-green-600" />
                         <span className="ml-2 text-xl font-bold">
                             BudgetWise
@@ -17,7 +24,7 @@ const Nav = () => {
                     </Link>
                 </h1>
                 <MobileNav />
-                <ul className={"flex gap-x-8"}>
+                <ul className={"flex gap-x-8 max-sm:hidden"}>
                     <li className={"py-2"}>
                         <Link
                             to={"#features"}
