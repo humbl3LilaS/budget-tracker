@@ -24,6 +24,7 @@ export default antfu(
             "node/prefer-global/process": ["off"],
             "style/jsx-one-expression-per-line": ["off"],
             "style/jsx-curly-brace-presence": ["off"],
+            "style/arrow-parens": ["off"],
             "perfectionist/sort-imports": [
                 "error",
                 {

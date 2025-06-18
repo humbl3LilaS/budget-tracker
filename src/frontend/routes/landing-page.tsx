@@ -1,3 +1,4 @@
+import Features from "@/components/landing-page/features";
 import Hero from "@/components/landing-page/hero";
 import Nav from "@/components/landing-page/nav";
 
@@ -9,6 +10,7 @@ const LandingPage = () => {
                     <Nav />
                 </header>
                 <Hero />
+                <Features />
             </div>
         </main>
     );
