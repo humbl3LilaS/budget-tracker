@@ -48,6 +48,12 @@ export default antfu(
                             message:
                                 "Do not import Link from next/navigation. Use react-query's Link instead.",
                         },
+                        {
+                            name: "next/navigation",
+                            importNames: ["redirect"],
+                            message:
+                                "Do not import redirect() from next/navigation. Use react-query's redirect() instead.",
+                        },
                     ],
                 },
             ],
