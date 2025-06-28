@@ -1,8 +1,8 @@
 import { Grid3X3, Info, Wallet } from "lucide-react";
 import { Link } from "react-router";
 
+import AuthBtn from "@/components/landing-page/auth-btn";
 import MobileNav from "@/components/landing-page/mobile-nav";
-import { Button } from "@/components/ui/button";
 
 const Nav = () => {
     return (
@@ -43,9 +43,7 @@ const Nav = () => {
                         </Link>
                     </li>
                     <li>
-                        <Button asChild={true}>
-                            <Link to={"/auth/sign-in"}>Sign In</Link>
-                        </Button>
+                        <AuthBtn />
                     </li>
                 </ul>
             </div>

@@ -8,16 +8,14 @@ import Reviews from "@/components/landing-page/reviews";
 const LandingPage = () => {
     return (
         <main>
-            <div className={""}>
-                <header>
-                    <Nav />
-                </header>
-                <Hero />
-                <Features />
-                <Reviews />
-                <Notice />
-                <Footer />
-            </div>
+            <header>
+                <Nav />
+            </header>
+            <Hero />
+            <Features />
+            <Reviews />
+            <Notice />
+            <Footer />
         </main>
     );
 };

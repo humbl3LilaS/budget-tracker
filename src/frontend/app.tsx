@@ -1,8 +1,8 @@
 "use client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
-import LandingPage from "@/frontend/routes/landing-page";
-import RootPage from "@/frontend/routes/root";
+import LandingPage from "@/frontend/pages/landing";
+import RootPage from "@/frontend/pages/root";
 import { authLoader } from "@/lib/loader";
 
 const router = createBrowserRouter([
@@ -19,6 +19,7 @@ const router = createBrowserRouter([
     {
         path: "/landing-page",
         element: <LandingPage />,
+        loader: authLoader,
     },
 ]);
 
