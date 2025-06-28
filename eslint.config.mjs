@@ -24,6 +24,7 @@ export default antfu(
             "node/prefer-global/process": ["off"],
             "style/jsx-one-expression-per-line": ["off"],
             "style/jsx-curly-brace-presence": ["off"],
+            "style/arrow-parens": ["off"],
             "perfectionist/sort-imports": [
                 "error",
                 {
@@ -46,6 +47,12 @@ export default antfu(
                             importNames: ["Link"],
                             message:
                                 "Do not import Link from next/navigation. Use react-query's Link instead.",
+                        },
+                        {
+                            name: "next/navigation",
+                            importNames: ["redirect"],
+                            message:
+                                "Do not import redirect() from next/navigation. Use react-query's redirect() instead.",
                         },
                     ],
                 },

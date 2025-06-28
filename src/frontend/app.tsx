@@ -1,20 +1,30 @@
 "use client";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 
-import LandingPage from "@/frontend/routes/landing-page";
-import RootPage from "@/frontend/routes/root";
+import LandingPage from "@/frontend/pages/landing";
+import RootPage from "@/frontend/pages/root";
+import { authLoader } from "@/lib/loader";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        loader: authLoader,
+        children: [
+            {
+                index: true,
+                element: <RootPage />,
+            },
+        ],
+    },
+    {
+        path: "/landing-page",
+        element: <LandingPage />,
+        loader: authLoader,
+    },
+]);
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<RootPage />} />
-            </Routes>
-            <Routes>
-                <Route path="/landing-page" element={<LandingPage />} />
-            </Routes>
-        </BrowserRouter>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
