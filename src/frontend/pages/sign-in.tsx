@@ -1,4 +1,4 @@
-import { Wallet } from "lucide-react";
+import { Github, Mail, Wallet } from "lucide-react";
 
 import SignInForm from "@/components/auth/sign-in-form";
 import { Button } from "@/components/ui/button";
@@ -35,8 +35,20 @@ const SignInPage = () => {
                 </CardHeader>
                 <CardContent>
                     <div className={"flex items-center gap-x-4"}>
-                        <Button className={"block flex-1/2"}>GitHub</Button>
-                        <Button className={"block flex-1/2"}>Google</Button>
+                        <Button
+                            className={"flex items-center flex-1/2"}
+                            variant={"outline"}
+                        >
+                            <Github />
+                            <span>GitHub</span>
+                        </Button>
+                        <Button
+                            className={"flex items-center flex-1/2"}
+                            variant={"outline"}
+                        >
+                            <Mail />
+                            <span>Google</span>
+                        </Button>
                     </div>
                     <div className={"my-6 flex items-center gap-x-2"}>
                         <span className={"h-[1px] grow bg-black/40"} />

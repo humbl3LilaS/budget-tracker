@@ -9,8 +9,14 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import { authClient } from "@/lib/auth-client";
 
 const SignUpPage = () => {
+    const githubSignIn = async () => {
+        await authClient.signIn.social({
+            provider: "github",
+        });
+    };
     return (
         <section className={"px-6"}>
             <header className={"text-center"}>
@@ -35,11 +41,18 @@ const SignUpPage = () => {
                 </CardHeader>
                 <CardContent>
                     <div className={"flex items-center gap-x-4"}>
-                        <Button className={"flex items-center flex-1/2"} variant={"outline"}>
+                        <Button
+                            className={"flex items-center flex-1/2"}
+                            variant={"outline"}
+                            onClick={githubSignIn}
+                        >
                             <Github />
                             <span>GitHub</span>
                         </Button>
-                        <Button className={"flex items-center flex-1/2"} variant={"outline"}>
+                        <Button
+                            className={"flex items-center flex-1/2"}
+                            variant={"outline"}
+                        >
                             <Mail />
                             <span>Google</span>
                         </Button>
