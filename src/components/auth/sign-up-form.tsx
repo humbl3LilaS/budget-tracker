@@ -67,6 +67,7 @@ const SignUpForm = () => {
                                 Full name:
                             </FormLabel>
                             <FormControl>
+                                {/* @ts-expect-error super error */}
                                 <Input
                                     placeholder={"Eg: Super Mario"}
                                     {...field}
@@ -84,6 +85,7 @@ const SignUpForm = () => {
                                 Email
                             </FormLabel>
                             <FormControl>
+                                {/* @ts-expect-error super error */}
                                 <Input
                                     placeholder={"Eg: super@gmail.com"}
                                     {...field}
