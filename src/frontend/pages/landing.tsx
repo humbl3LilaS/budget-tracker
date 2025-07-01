@@ -7,7 +7,7 @@ import Reviews from "@/components/landing-page/reviews";
 
 const LandingPage = () => {
     return (
-        <main>
+        <>
             <header>
                 <Nav />
             </header>
@@ -16,7 +16,7 @@ const LandingPage = () => {
             <Reviews />
             <Notice />
             <Footer />
-        </main>
+        </>
     );
 };
 
