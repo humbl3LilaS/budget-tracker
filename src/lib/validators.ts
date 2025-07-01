@@ -33,3 +33,10 @@ export const SignUpSchema = z
     });
 
 export type TSignUpSchema = z.infer<typeof SignUpSchema>;
+
+export const SignInSchema = z.object({
+    email: z.email(),
+    password: z.string().min(8, "Password must be at least 8 characters"),
+});
+
+export type TSignInSchema = z.infer<typeof SignInSchema>;

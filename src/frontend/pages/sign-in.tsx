@@ -23,14 +23,14 @@ const SignInPage = () => {
                     <span className="ml-2 text-xl font-bold">BudgetWise</span>
                 </h1>
                 <p className={"text-muted-foreground"}>
-                    Create your account to start managing your finances
+                    Welcome back! Sign in to your account
                 </p>
             </header>
             <Card className={"mt-8"}>
                 <CardHeader className={"text-center"}>
-                    <CardTitle className={"text-xl"}>Create Account</CardTitle>
+                    <CardTitle className={"text-xl"}>Sign In</CardTitle>
                     <CardDescription>
-                        Enter your information to create your BudgetWise account
+                        Enter your email and password to access your account
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
