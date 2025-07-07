@@ -1,7 +1,7 @@
 import { Github, Mail, Wallet } from "lucide-react";
 
 import SignUpForm from "@/components/auth/sign-up-form";
-import { Button } from "@/components/ui/button";
+import SocialBtn from "@/components/landing-page/social-btn";
 import {
     Card,
     CardContent,
@@ -15,6 +15,12 @@ const SignUpPage = () => {
     const githubSignIn = async () => {
         await authClient.signIn.social({
             provider: "github",
+        });
+    };
+
+    const googleSignIn = async () => {
+        await authClient.signIn.social({
+            provider: "google",
         });
     };
     return (
@@ -41,21 +47,14 @@ const SignUpPage = () => {
                 </CardHeader>
                 <CardContent>
                     <div className={"flex items-center gap-x-4"}>
-                        <Button
-                            className={"flex items-center flex-1/2"}
-                            variant={"outline"}
-                            onClick={githubSignIn}
-                        >
+                        <SocialBtn callback={githubSignIn}>
                             <Github />
                             <span>GitHub</span>
-                        </Button>
-                        <Button
-                            className={"flex items-center flex-1/2"}
-                            variant={"outline"}
-                        >
+                        </SocialBtn>
+                        <SocialBtn callback={googleSignIn}>
                             <Mail />
                             <span>Google</span>
-                        </Button>
+                        </SocialBtn>
                     </div>
                     <div className={"my-6 flex items-center gap-x-2"}>
                         <span className={"h-[1px] grow bg-black/40"} />
