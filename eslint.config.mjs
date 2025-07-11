@@ -12,7 +12,7 @@ export default antfu(
             semi: true,
             quotes: "double",
         },
-        ignores: [".*", "package.json"],
+        ignores: [".*", "package.json", "src/components/ui"],
     },
     {
         rules: {
