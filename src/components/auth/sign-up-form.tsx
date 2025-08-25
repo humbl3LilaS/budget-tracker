@@ -6,6 +6,7 @@ import { toast } from "sonner";
 
 import type { TSignUpSchema } from "@/lib/validators";
 
+import PasswordGuide from "@/components/auth/password-guide";
 import { Checkbox } from "@/components/ui/checkout";
 import {
     Form,
@@ -108,6 +109,7 @@ const SignUpForm = () => {
                                     value={field.value}
                                 />
                             </FormControl>
+                            <PasswordGuide control={form.control} />
                         </FormItem>
                     )}
                 />
